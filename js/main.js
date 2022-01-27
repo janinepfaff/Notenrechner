@@ -40,6 +40,7 @@ function tfAuslesen() {
 }
 
 
+
 function eingabeUeberpruefen(punkte) {
     if (isNaN(punkte)){
         console.log("Keine Zahl");
