@@ -3,12 +3,12 @@ let summe = 0;
 let anzahlNoten = 0;
 let ergebnis;
 
-
+//reflector auf -> notenAuslesen()
 function tfAuslesen() {
     anzahlNoten = 0
     summe = 0
 
-    n1 = parseInt(document.getElementById("tfNote1").value);
+    n1 = parseInt(document.getElementById("tfNote1").value); //Auslesen des ersten Notenfeldes
     n2 = parseInt(document.getElementById("tfNote2").value);
     n3 = parseInt(document.getElementById("tfNote3").value);
     n4 = parseInt(document.getElementById("tfNote4").value);
@@ -38,7 +38,7 @@ function tfAuslesen() {
 
     }
 }
-
+//Aenderung der Farbe des Ergebnisses
 
 
 function eingabeUeberpruefen(punkte) {
@@ -49,3 +49,5 @@ function eingabeUeberpruefen(punkte) {
         summe = summe + punkte;
     }
 }
+
+//Ergebnis ausrechnen
