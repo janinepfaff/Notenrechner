@@ -1,4 +1,6 @@
-let n1, n2, n3, n4, n5;
+let eingabeFelder = ['tfNote1','tfNote2','tfNote3','tfNote4','tfNote5','tfNote6']; //anzahl Textfelder
+let noten = [];
+let aktuelleEingabe;
 let summe = 0;
 let anzahlNoten = 0;
 let ergebnis;
@@ -7,27 +9,20 @@ let ergebnis;
 function "tfAuslesen" ließt Textfelder aus und berechnet im Anschluss den Durchschnitt nachdem die Eingaben auf Plausibilität geprüft wurden
  */
 
-//reflector auf -> notenAuslesen()
 function tfAuslesen() {
     anzahlNoten = 0
     summe = 0
 
-    n1 = parseInt(document.getElementById("tfNote1").value); //Auslesen des ersten Notenfeldes
-    n2 = parseInt(document.getElementById("tfNote2").value);
-    n3 = parseInt(document.getElementById("tfNote3").value);
-    n4 = parseInt(document.getElementById("tfNote4").value);
-    n5 = parseInt(document.getElementById("tfNote5").value);
+    for (let i = 0; i < eingabeFelder.length; i = i + 1) {
+        aktuelleEingabe = parseInt(document.getElementById(eingabeFelder[i]).value);
+        eingabeUeberpruefen(aktuelleEingabe);
+// Schleife angelegt
+
+    }
 
 
-    console.log(n1 + ";" + n2 + ";" + n3 + ";" + n4 + ";" + n5);
 
-    eingabeUeberpruefen(n1);
-    eingabeUeberpruefen(n2);
-    eingabeUeberpruefen(n3);
-    eingabeUeberpruefen(n4);
-    eingabeUeberpruefen(n5);
-
-    ergebnis = summe / anzahlNoten;
+    ergebnis = summe / anzahlNoten; //Rechenschritt zum Ergebnis
 
     document.getElementById("ausgabe").innerHTML = ergebnis;
 
@@ -56,3 +51,4 @@ function eingabeUeberpruefen(punkte) {
 }
 
 //Ergebnis ausrechnen
+
